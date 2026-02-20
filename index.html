@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birthday 🎂</title>
-
+  <title>Happy Birthday 🎉</title>
   <style>
     body {
-      background: linear-gradient(to right, #ffdede, #ffe9ca);
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
       text-align: center;
-      color: #fff;
-      padding: 40px;
+      font-family: Arial, sans-serif;
       overflow-x: hidden;
     }
 
     h1 {
-      font-size: 50px;
+      color: #ff4081;
+      font-size: 40px;
+      margin-top: 30px;
     }
 
     p {
-      font-size: 22px;
+      font-size: 18px;
+      color: #444;
     }
 
     img {
       width: 250px;
+      margin: 15px;
       border-radius: 20px;
-      margin: 20px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    /* Floating hearts & cakes */
+    /* floating hearts */
     .heart {
       position: fixed;
-      bottom: 0;
+      bottom: -20px;
       font-size: 24px;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
+      animation: float 6s infinite;
+      color: red;
     }
 
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-      }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>🎂 Happy Birthday Shourya ❤️</h1>
+<h1>Happy Birthday Shourya 🎂❤️</h1>
 
-  <p>You make the world brighter just by being in it ✨</p>
+<p>
+From someone who truly cares 🤍  
+May your life be filled with happiness, health, and endless smiles ✨
+</p>
 
-  <img src=""img1.jpg">
-  <img src=""img2.jpg">
-  <img src=""img3.jpg">
+<!-- IMAGES -->
+<img src="img1.jpg" alt="Shourya pic 1">
+<img src="img2.jpg" alt="Shourya pic 2">
+<img src="img3.jpg" alt="Shourya pic 3">
 
-  <p>May all your dreams come true 💕</p>
-  <p>— with all my love ❤️</p>
+<!-- CAKE -->
+<p style="font-size:50px;">🎂</p>
 
-  <script>
-    function createEmoji(emoji) {
-      const el = document.createElement("div");
-      el.className = "heart";
-      el.innerText = emoji;
-      el.style.left = Math.random() * 100 + "vw";
-      el.style.animationDuration = (Math.random() * 3 + 4) + "s";
-      document.body.appendChild(el);
-
-      setTimeout(() => {
-        el.remove();
-      }, 7000);
-    }
-
-    // hearts 💖
-    setInterval(() => createEmoji("💖"), 700);
-
-    // cakes 🎂
-    setInterval(() => createEmoji("🎂"), 2000);
-  </script>
+<!-- HEARTS -->
+<div class="heart" style="left:10%;">❤️</div>
+<div class="heart" style="left:30%; animation-delay:1s;">💖</div>
+<div class="heart" style="left:50%; animation-delay:2s;">❤️</div>
+<div class="heart" style="left:70%; animation-delay:3s;">💗</div>
+<div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
 
 </body>
 </html>
