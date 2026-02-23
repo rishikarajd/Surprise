@@ -47,9 +47,19 @@
 <body>
 
 <!-- BACKGROUND MUSIC -->
-<audio controls loop>
-  <source src="song3.mpeg" type="audio/mpeg">
+<audio id="bgMusic" controls>
+  <source src="song.mp3.mpeg" type="audio/mpeg">
 </audio>
+
+<button onclick="playMusic()" style="margin-top:15px;font-size:18px;">
+💖 Tap to Play Song 💖
+</button>
+
+<script>
+function playMusic() {
+  document.getElementById("bgMusic").play();
+}
+</script>
   
 
 <h1>Happy Birthday Shouryaa 🎂❤️</h1>
